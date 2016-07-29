@@ -13,8 +13,7 @@ import android.widget.TextView;
 
 public class HeadGiftBtn extends RelativeLayout {
 
-    //private GifImageView mBtn;
-    private ImageView mBtn;
+    private GifImageView mBtn;
     private ImageView mReddot;
     private TextView mCountRed;
     private int mImageResId = 0;
@@ -81,11 +80,10 @@ public class HeadGiftBtn extends RelativeLayout {
         mBtn.setBackgroundDrawable(null);
     }
 
- /*
     public GifImageView getGiftImage(){
         return mBtn;
     }
-*/
+
     public interface OnBtnClickListener{
         public void onClick(View v);
     }
@@ -97,7 +95,7 @@ public class HeadGiftBtn extends RelativeLayout {
     }
 
     private void initView() {
-        mBtn = (ImageView)findViewById(R.id.btn);;//(GifImageView)findViewById(R.id.btn);
+        mBtn = (GifImageView)findViewById(R.id.btn);
         mReddot = (ImageView)findViewById(R.id.red);
         mCountRed = (TextView) findViewById(R.id.red_count);
     }
@@ -135,11 +133,11 @@ public class HeadGiftBtn extends RelativeLayout {
         }
         return false;
     }
-/*
+
     public void clear(){
         if(mBtn != null){
             mBtn.clear();
         }
     }
-    */
+
 }
